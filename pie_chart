@@ -1,0 +1,12 @@
+#1
+slices <- c(1664,1587,513,303) 
+lbls <- c("A", "B", "C","D")
+pie(slices, labels = lbls)
+1664+1587+513+303 4067
+41% A 39% B 13% C
+#2
+slices <- c(5171,4541,1341,785)
+lbls <- c("A", "B", "C","D")
+pie(slices, labels = lbls)
+5171+4541+1341+785 11838
+44% A 38% B 11% C
