@@ -1,0 +1,10 @@
+InputDPNinc =("
+domain up  down
+interest 4 0
+other  54 41
+        ")
+Matriz = as.matrix(read.table(textConnection(InputDPNinc),
+                              header=TRUE,
+                              row.names=1))
+fisher.test(Matriz)
+chisq.test(Matriz, correct = TRUE)
