@@ -1,0 +1,3 @@
+ggplot(geneexp1, aes(x=CELL, y=read)) + 
+  geom_violin(fill="#ED1C24", color="black")+ theme_classic() + stat_summary(fun.data=data_summary) + geom_boxplot(width=0.1, fill="lightcoral",  outlier.colour=NA) +
+  scale_fill_viridis(discrete = TRUE)
