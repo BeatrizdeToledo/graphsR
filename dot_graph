@@ -1,0 +1,37 @@
+
+a <- c("Mouse", 
+       "Human",
+       "Zebrafish",
+       "c. Elegans",
+       "Gallus", 
+       "Droshophila",
+       "arabdopsis", 
+       "Macaque" )
+b<-c(    2728.222451,
+     3096.649726,
+     1373.471384,
+     100.286401,
+     1053.332251,
+     143.726002,
+     119.667750,
+     2971.33153)
+c<-c(39819,
+     45794,
+     32144,
+     44798,
+     30047,
+     18012,
+     32833,
+     34665)
+d <- c(22110,
+       19827,
+       25545,
+       19985,
+       17007,
+       13968,
+       27655,
+       21761)
+library(ggplot2)
+df <- data.frame(a,b,d)
+p <- ggplot(df, aes(b,d, colour = factor(a)))
+p + geom_point(size = 3) + scale_y_continuous(limits=c(0,30000))  + scale_x_continuous(limits=c(0,4000))+  theme_classic()
