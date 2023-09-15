@@ -1,0 +1,6 @@
+df2 <- data.frame(transcripts=rep(c("A", "B", "C", "D"),each=2),
+                  group=rep(c("no_NMD", "NMD"), 4),
+                  events=c(1458, 185, 280, 14, 1092, 452, 329, 159)) 
+ggplot(data=df2, aes(x=transcripts, y=events, fill=group)) +
+  geom_bar(stat="identity")+
+  scale_x_discrete(limits=c("A", "B", "C", "D"))   +  theme_classic()
